@@ -57,7 +57,7 @@ function PaymentForm({
         throw new Error('NOPE');
       }
       setSuccess(true);
-      router.push('/');
+      router.push('/test-pay-ts');
     } catch (e) {
       console.log(e);
       setSuccess(false);
