@@ -7,10 +7,15 @@ import PaymentForm from '../PaymentForm';
 import { useEffect, useState } from 'react';
 import testApiCall from '@/lib/helper';
 export default function page({}: Props) {
-  const operator = useState(() => sessionStorage.getItem('operator'));
+  const [operator, setOperator] = useState('');
   const [inputPhoneNumber, setInputPhoneNumber] = useState('');
   const [inputAmount, setInputAmount] = useState(1);
   const [formData, setFormData] = useState({});
+
+  console.log(operator);
+  useEffect(() => {
+    setOperator(sessionStorage.getItem('operator') || '');
+  }, []);
 
   useEffect(() => {
     if (formData) {
@@ -23,7 +28,7 @@ export default function page({}: Props) {
         <PaymentForm
           testApiCall={testApiCall}
           setData={setFormData}
-          operator={operator[0]}
+          operator={operator}
           inputPhoneNumber={inputPhoneNumber}
           setInputPhoneNumber={setInputPhoneNumber}
           inputAmount={inputAmount}
