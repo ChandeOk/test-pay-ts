@@ -33,7 +33,7 @@ function PaymentForm({
   const [success, setSuccess] = useState(true);
   const router = useRouter();
 
-  const imgUrl = `/${operator}.svg`;
+  const imgUrl = `out/${operator}.svg`;
 
   useEffect(() => {
     const validPhoneLength = 10;

@@ -7,7 +7,7 @@ type Props = {
 };
 
 function Card({ item, handleCardClick }: Props) {
-  const imgUrl = `/${item.name}.svg`;
+  const imgUrl = `/out/${item.name}.svg`;
   return (
     <CardStyled item={item} onClick={() => handleCardClick(item)}>
       <CardImageStyled src={imgUrl} />
