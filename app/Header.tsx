@@ -5,7 +5,7 @@ type Props = {};
 export default function Header({}: Props) {
   return (
     <HeaderStyled>
-      <Logo src={'/logo.svg'} alt='logo' />
+      <Logo src={'out/logo.svg'} alt='logo' />
     </HeaderStyled>
   );
 }
