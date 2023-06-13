@@ -9,7 +9,7 @@ import {
 } from '../components/PaymentFormStyled';
 import { NumericFormat, PatternFormat } from 'react-number-format';
 import Flex from '../components/Flex';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 type Props = {
   inputPhoneNumber: string;
   setInputPhoneNumber: (phone: string) => void;
@@ -57,7 +57,8 @@ function PaymentForm({
         throw new Error('NOPE');
       }
       setSuccess(true);
-      router.push('/test-pay-ts');
+      // router.push('/test-pay-ts');
+      location.href = 'https://chandeok.github.io/test-pay-ts';
     } catch (e) {
       console.log(e);
       setSuccess(false);
