@@ -9,7 +9,7 @@ import {
 } from '../components/PaymentFormStyled';
 import { NumericFormat, PatternFormat } from 'react-number-format';
 import Flex from '../components/Flex';
-import { useRouter } from 'next/navigation';
+import { useRouter } from 'next/router';
 type Props = {
   inputPhoneNumber: string;
   setInputPhoneNumber: (phone: string) => void;
